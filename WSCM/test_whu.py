@@ -47,7 +47,8 @@ def fusion_images(rgb_path, ir_path, image_path_fus):
         test_vi_features = encoder(rgb_tensor)
         test_ir_features = encoder(ir_tensor)
 
-        x_fus = cfmd(test_vi_features, test_ir_features)
+        x_c = cfmd(test_vi_features, test_ir_features)
+        x_fus = 0.1 * (x_c) + 0.9 * (test_vi_features + test_ir_features)
         generated_vi_images = decoder(x_fus)
 
         ones_1 = torch.ones_like(generated_vi_images)
