@@ -42,5 +42,5 @@ class CFDM(nn.Module):
         cross_attended_2 = cross_attended_2.permute(0, 2, 1, 3).contiguous().view(B, -1, self.num_heads * self.head_dim)
         fused_F1 = self.output_linear(cross_attended_1).permute(0, 2, 1).view(B, C, H, W)
         fused_F2 = self.output_linear(cross_attended_2).permute(0, 2, 1).view(B, C, H, W)
-        fused_feature =  0.1 * (fused_F1 + fused_F2) + 0.9 * (F1 +F2)
+        fused_feature =  fused_F1 + fused_F2
         return fused_feature
