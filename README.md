@@ -1,7 +1,7 @@
 # WSCM
 
 # Model
-You can obtain the trained model parameters through this [link](https://pan.baidu.com/s/1ocYFQJCMPPO8TwzZ7rvpqA) with password:w3q5.
+You can obtain the trained model parameters through this [link](https://pan.baidu.com/s/1JZ8xGZkA26XiZL_XJ5azjw) with password:63u9.
 
 # Test
 ```python
